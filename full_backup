@@ -1,10 +1,9 @@
 #!/bin/bash
 
-_HOME='/home/twildeboer'
+_HOME='/home/victor'
 _SRC_ROOT='/'
-_DEST_ROOT='/media/twildeboer/fs-backup/autonomic-backup-full'
+_DEST_ROOT='/mnt/fs-backup'
 
 _SCRIPT_DIR="$(cd "${0%/*}"; pwd)"
 
-pkexec --user root \
-  "${_SCRIPT_DIR}/incremental_backup" "${_HOME}" "${_SRC_ROOT}" "${_DEST_ROOT}"
+sudo ./incremental_backup "${_HOME}" "${_SRC_ROOT}" "${_DEST_ROOT}"
